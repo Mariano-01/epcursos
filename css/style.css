@@ -1,115 +1,100 @@
-@font-face {
-    font-family: 'SF Fedora';
-    src: url('./fonts/sffedora.ttf') format('truetype'),
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* style.css */
 body {
-    background: #e7e7e7;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e7e7e7;
     color: #333;
-}
-
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
+    scroll-behavior: smooth;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8;
 }
 
 header {
-    background: #d0ff00;
     background: linear-gradient(90deg, rgba(208, 255, 0, 1) 0%, rgba(0, 136, 46, 1) 100%);
-    padding: 15px 0;
+    padding: 20px 0;
+    color: white;
+    text-align: center;
 }
 
-header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo img.ep2025 {
-    width: 60px;
+.logo {
+    font-size: 2.2rem;
+    font-weight: bold;
 }
 
 .menu ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
 }
 
 .menu ul li a {
-    text-decoration: none;
     color: white;
+    text-decoration: none;
     font-weight: bold;
-    transition: all 0.3s;
-    padding: 8px 12px;
-    border-radius: 5px;
+    font-size: 1.2rem;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
 }
 
 .menu ul li a:hover {
     color: chocolate;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
-.sobre {
-    background: #fff;
-    padding: 60px 20px;
+.section {
+    padding: 80px 30px;
+    background-color: white;
+    margin-bottom: 20px;
 }
 
-.sobre-conteudo {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-}
-
-.imagem-sobre {
-    width: 250px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.texto {
-    max-width: 600px;
-}
-
-.texto h2 {
-    font-size: 2rem;
+h2 {
     color: #5ae719;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
+    font-size: 2.5rem;
+    font-weight: bold;
     font-family: 'SF Fedora', sans-serif;
 }
 
-.texto p {
+.footer {
+    background: #333;
+    color: white;
+    padding: 25px 0;
+    text-align: center;
     font-size: 1.1rem;
-    line-height: 1.6;
+}
+
+.img-thumbnail {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 12px;
+    margin-top: 15px;
+}
+
+.img-thumbnail:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
-    .sobre-conteudo {
-        flex-direction: column;
-        text-align: center;
-    }
-
     .menu ul {
         flex-direction: column;
-        gap: 10px;
-        align-items: flex-end;
+        gap: 12px;
+        align-items: center;
     }
 
     header .container {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+    }
+
+    .img-thumbnail {
+        width: 80%;
+        margin: 0 auto;
     }
 }
-
-.johnpersona3 {
-    width: 20%;
+.menu ul li a {
+    font-size: 1.5rem;
 }
